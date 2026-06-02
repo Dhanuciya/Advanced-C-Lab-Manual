@@ -15,14 +15,54 @@ Else
 6.	Return 0
  
 Program:
+~~~
+#include <stdio.h>
 
-// Type your code here
+struct eligible
+{
+    int age;
+    char n[50];
+};
 
+int main()
+{
+    struct eligible e[10];
+    int i, num;
+
+    printf("Enter number of persons: ");
+    scanf("%d", &num);
+
+    for(i = 0; i < num; i++)
+    {
+        printf("Enter name: ");
+        scanf("%s", e[i].n);
+
+        printf("Enter age: ");
+        scanf("%d", &e[i].age);
+    }
+
+    printf("\nVaccine Eligibility Details:\n");
+
+    for(i = 0; i < num; i++)
+    {
+        printf("\nName: %s\n", e[i].n);
+        printf("Age: %d\n", e[i].age);
+
+        if(e[i].age <= 6)
+            printf("Vaccine Eligibility: No\n");
+        else
+            printf("Vaccine Eligibility: Yes\n");
+    }
+
+    return 0;
+}
+~~~
 
 Output:
 
-// paste the output screenshot
+<img width="394" height="664" alt="image" src="https://github.com/user-attachments/assets/2c6175b5-9fc6-4f5f-8f56-a6300799fc9a" />
 
 
 Result:
+
 Thus, the program is verified successfully.
