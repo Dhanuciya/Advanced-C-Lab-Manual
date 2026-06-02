@@ -12,19 +12,49 @@ Algorithm:
 7.	Return 0
  
 Program:
+~~~
+#include <stdio.h>
 
-//type your code here
+struct numbers
+{
+    int a;
+    int b;
+};
 
+struct numbers add(struct numbers n)
+{
+    struct numbers result;
 
+    result.a = n.a;
+    result.b = n.b;
+    
+    printf("Sum = %d\n", n.a + n.b);
+
+    return result;
+}
+
+int main()
+{
+    struct numbers n, res;
+
+    printf("Enter value of a: ");
+    scanf("%d", &n.a);
+
+    printf("Enter value of b: ");
+    scanf("%d", &n.b);
+
+    res = add(n);
+
+    return 0;
+}
+~~~
 
 
 Output:
 
-//paste your output screenshots here
-
-
-
+<img width="315" height="162" alt="image" src="https://github.com/user-attachments/assets/759a1232-e204-4fba-8766-9499e42a1a8b" />
 
 
 Result:
+
 Thus, the program is verified successfully
